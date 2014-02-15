@@ -11,3 +11,113 @@ caelum - fj11
 GUJ - Grupos de usuário java. - fórum para usuários de java.
 
 Alura - Cursos Online de java.
+
+
+Main - já pode ser executado.
+
+fortemente e estaticamente tipada:
+
+forte: assume valores que não podem ser alterados.
+se vc dizer que certa coisa é uma string, ela sempre vai virar uma string.
+
+//Script 1 - Criando caixa de textos
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package primeiraaula;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author adminstrador
+ */
+public class PrimeiraAula {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        String mensagem;
+        mensagem = "Digite seu nome:";
+        mensagem = JOptionPane.showInputDialog(mensagem); //input = você terá que digitar em uma caixa de texto.
+        JOptionPane.showMessageDialog(null, "Seu nome é lindo!"); // Mostrar a resposta como mensagem em uma caixa de texto.
+    }
+}
+
+//Script 2 - testando variáveis
+/*
+ * Javascript.
+ * Header Alterado
+ * Teste
+ */
+
+package primeiraaula;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author adminstrador
+ */
+public class TesteVariaveis {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 10;
+        byte c = 5;
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(a+b);
+        System.out.println(a-b);
+        System.out.println(a*b);
+        System.out.println(a/b);
+        boolean verdadeiro = true;
+        boolean falso = false;
+        System.out.println(verdadeiro);
+        System.out.println(!falso);
+        System.out.println(verdadeiro||falso);
+        System.out.println(true||true);
+        System.out.println(true||false);
+        System.out.println(false||true);
+        System.out.println(false||false);
+        System.out.println(true&&true);
+        System.out.println(true&&false);
+        System.out.println(false&&true);
+        System.out.println(false&&false);
+        
+
+}
+}
+
+//Pergunta 1 - Exercício pag. 46
+/*
+ * Javascript.
+ * Header Alterado
+ * Teste
+ */
+
+package primeiraaula;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author adminstrador
+ */
+public class LerDadosConvertidos {
+    public static void main(String[] args) {
+      String perguntab = JOptionPane.showInputDialog("Digite o valor da base do triângulo");
+      int base = Integer.parseInt(perguntab); // Atenção a esse comando integer, ele está convertendo a string (texto) em uma int
+                                              // (Que é usada para número e fazer calculos, dessa forma a perguntab e a perguntaal 
+                                              // poderá ser somada e mutiplicada como um número.
+                                              // Ou seja, ler dados convertidos.
+      String perguntaal = JOptionPane.showInputDialog("Digite o valor da altura do triângulo");
+      int altura = Integer.parseInt(perguntaal);
+      int resultado = (base*altura)/2;
+      JOptionPane.showMessageDialog(null, "O valor da área do triângulo é:" + resultado);
+      
+    }
+}
