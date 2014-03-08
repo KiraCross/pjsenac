@@ -1,0 +1,62 @@
+http://slid.es/renatofilho/    (programação)
+
+--------------------------------------------------------------
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package PI.senac.br.cursopoo.aula03;
+
+/**
+ *
+ * @author JúlioCésar
+ */
+public class Aula03 {
+    
+    public static void main (String[] args) {
+        Automovel carro = new Automovel();
+        int velocidade = carro.retornaVelocidade();
+       System.out.println(velocidade);
+        carro.aumentarVelocidade(14);
+       System.out.println(carro.retornaVelocidade());
+        carro.aumentarVelocidade(70);
+       System.out.println(carro.retornaVelocidade());
+        carro.frearVelocidade(50);
+       System.out.println(carro.retornaVelocidade());  
+       
+       Lampada lampada = new Lampada();
+       lampada.ligarlampada();
+       lampada.desligarlampada();
+   }
+    
+
+}
+
+---------------------------------------------------------------
+/**
+ *
+ * @author Júlio César
+ */
+
+package PI.senac.br.cursopoo.aula03;
+
+public class Automovel {
+
+public int velocidade;
+
+    int retornaVelocidade() {
+        return velocidade;
+    }
+    
+    void aumentarVelocidade(int velocidade) {
+        this.velocidade += velocidade;
+    }
+    
+    void frearVelocidade(int diminuirvel) {
+        this.velocidade = velocidade - diminuirvel;
+    }
+    
+}              
+---------------------------------------------------------------
