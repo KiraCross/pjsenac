@@ -1,0 +1,91 @@
+Abstração, Herança e Polimorfismo.
+
+
+package posenac;
+
+/**
+ *
+ * @author Aluno
+ */
+public abstract class Pessoa {
+    private String nome;
+    private String endereço;
+    private double valorEmprestado = 0;
+    
+    public abstract void perdirEmprestimo();
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEndereço() {
+        return endereço;
+    }
+
+    public void setEndereço(String endereço) {
+        this.endereço = endereço;
+    }
+
+    public double getValorEmprestado() {
+        return valorEmprestado;
+    }
+
+    public void setValorEmprestado(double valorEmprestado) {
+        this.valorEmprestado = valorEmprestado;
+    }
+
+
+    
+}
+
+--------------
+
+package posenac;
+
+/**
+ *
+ * @author Aluno
+ */
+public class TestePessoa {
+    public static void main (String[]args){
+        Pessoa pessoa = new PessoaFisica();
+    
+    }
+}
+-------------------------
+
+package posenac;
+
+/**
+ *
+ * @author Aluno
+ */
+public class PessoaFisica extends Pessoa{
+    private String cpf;
+
+    public void perdirEmprestimo() {
+        this.setValorEmprestado(50);
+    }
+    
+    
+}
+
+----------------------
+
+package posenac;
+
+/**
+ *
+ * @author Aluno
+ */
+public class PessoaJuridica extends Pessoa {
+
+      public void perdirEmprestimo() {
+        this.setValorEmprestado(500);
+    }
+    
+}
